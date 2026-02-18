@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - MedKare</title>
+    <link rel="stylesheet" href="style_sign_in_as.css">
+</head>
+
+<body>
+
+    <nav class="Nav_bar">
+        <h1 class="MedKare">MedKare</h1>
+        <a class="Home" href="main.html">Home</a>
+    </nav>
+
+    <div class="Bg_box">
+        <div class="SignUp_Box">
+            
+            <h2 class="H2">Create Your Account</h2>
+
+            <form class="F1" onsubmit="redirectUser(event)">
+
+                <table class="T1">
+                    <tr class="Tr1">
+                        <td class="Td1_1">Username</td>
+                        <td class="Td1_2">
+                            <input id="username" class="I" type="text" placeholder="Choose a username" required>
+                        </td>
+                    </tr>
+
+                    <tr class="Tr2">
+                        <td class="Td2_1">Email</td>
+                        <td class="Td2_2">
+                            <input id="email" class="I" type="email" placeholder="Enter email" required>
+                        </td>
+                    </tr>
+
+                    <tr class="Tr3">
+                        <td class="Td3_1">Password</td>
+                        <td class="Td3_2">
+                            <input id="password" class="I" type="password" placeholder="Create password" required>
+                        </td>
+                    </tr>
+
+                    <tr class="Tr4">
+                        <td class="Td4_1">Confirm Password</td>
+                        <td class="Td4_2">
+                            <input id="confPass" class="I" type="password" placeholder="Re-enter password" required>
+                        </td>
+                    </tr>
+
+                    <tr class="Tr5">
+                        <td class="Td5_1">Account Type</td>
+                        <td class="Td5_2">
+                            <select id="accType" class="I" required>
+                                <option value="">Select</option>
+                                <option value="user">Patient</option>
+                                <option value="doctor">Doctor</option>
+                                <option value="nurse">Nurse</option>
+                                <option value="support">Support Team</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
+                <button class="B" type="submit">Sign Up</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function redirectUser(event) {
+            event.preventDefault();
+
+            const type = document.getElementById("accType").value;
+
+            if (type === "") {
+                alert("Please select account type.");
+                return;
+            }
+
+            if (type === "user") {
+                window.location.href = "Account_Details.html";
+            } 
+            else if (type === "doctor") {
+                window.location.href = "doctor_details.html";
+            }
+            else if (type === "nurse") {
+                window.location.href = "nurse_details.html";
+            }
+            else if (type === "support") {
+                window.location.href = "support_details.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
