@@ -1,7 +1,0 @@
-Main branch text only :
-
-     1st Upload Done ( KP ) of :
-
-                Main = 80%
-                Login = 50%
-                Sign up = 50%
